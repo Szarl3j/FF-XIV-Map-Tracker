@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <title>FFXIV Map Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <img src="https://img2.finalfantasyxiv.com/c/S3a_823c68e13683a115b4df62bfab74d24b_00_64x64.png" alt="Game Logo" class="logo">
+            <label for="language">Wybór języka:</label>
+            <select id="language">
+                <option value="PL">PL</option>
+                <option value="ENG">ENG</option>
+                <option value="FR">FR</option>
+            </select>
+            
+            <label for="calendar">Wybierz datę:</label>
+            <input type="date" id="calendar">
+            
+            <label for="map-level">Poziom Mapy:</label>
+            <select id="map-level">
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+            </select>
+
+            <label for="num-maps">Liczba Map:</label>
+            <input type="number" id="num-maps" value="0" min="0">
+
+            <label for="num-portals">Liczba Portali:</label>
+            <input type="number" id="num-portals" value="0" min="0">
+
+            <button id="add-data">Dodaj Dane</button>
+            <button id="edit-data">Edytuj Dane</button>
+            <button id="delete-data">Usuń Wybrane Dane</button>
+            <button id="load-csv">Załaduj CSV</button>
+            <button id="save-csv">Zapisz jako CSV</button>
+            <button id="load-excel">Załaduj Excel</button>
+            <button id="save-excel">Zapisz jako Excel</button>
+        </div>
+
+        <div class="main-content">
+            <h1 id="main-title">FFXIV Map Tracker</h1>
+
+            <div id="summary" class="summary-center">
+                <h2 id="summary-title">Podsumowanie</h2>
+                <p id="summary-maps">Razem Mapy: <span id="total-maps">0</span></p>
+                <p id="summary-portals">Razem Portale: <span id="total-portals">0</span></p>
+                <p id="summary-without-portals">Mapy bez Portali: <span id="maps-without-portals">0</span></p>
+                <p id="summary-percentage">Procent Map Bez Portali: <span id="percentage-without-portals">0%</span></p>
+            </div>
+
+            <canvas id="charts" width="400" height="200"></canvas>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th id="table-header-level">Poziom Mapy</th>
+                        <th id="table-header-maps">Liczba Map</th>
+                        <th id="table-header-portals">Liczba Portali</th>
+                        <th id="table-header-percentage">Procent Map bez Portali</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

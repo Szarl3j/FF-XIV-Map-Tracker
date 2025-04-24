@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    justify-content: center; /* Wyśrodkowanie zawartości kontenera */
+}
+
+.menu {
+    width: 250px;
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin-right: 20px; /* Odstęp między menu a główną zawartością */
+}
+
+.menu label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.menu select,
+.menu input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.menu button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.menu button:hover {
+    background-color: #2980b9;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie elementów w głównej zawartości */
+}
+
+.summary-center {
+    margin-bottom: 20px; /* Odstęp podsumowania od wykresu */
+}
+
+.logo {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #2c3e50;
+    color: white;
+}

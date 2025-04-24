@@ -1,0 +1,15 @@
+{
+    "name": "FFXIV Map Tracker",
+    "short_name": "Map Tracker",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2c3e50",
+    "icons": [
+        {
+            "src": "https://img2.finalfantasyxiv.com/c/S3a_823c68e13683a115b4df62bfab74d24b_00_64x64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}
